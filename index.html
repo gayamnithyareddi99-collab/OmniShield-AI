@@ -56,34 +56,70 @@ padding:15px 20px;
 .logo{
 font-weight:700;
 font-size:20px;
-color:var(--primary);
+color:white;
 }
 
 .nav-links a{
 margin-left:25px;
 text-decoration:none;
-color:#ffffff;
+color:white;
 font-weight:500;
 }
 
 .nav-links a:hover{
-color:var(--primary);
+color:#dbeafe;
 }
-/* MOBILE */
+
+/* HAMBURGER MENU */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+cursor:pointer;
+}
+
+.menu-toggle span{
+width:25px;
+height:3px;
+background:white;
+margin:4px 0;
+display:block;
+}
+
+/* MOBILE MENU */
 
 @media(max-width:900px){
 
-.hero-container,
-.about-grid,
-.features-grid,
-.process-grid,
-.pricing-grid{
-grid-template-columns:1fr;
+.menu-toggle{
+display:flex;
+}
+
+.nav-links{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:linear-gradient(120deg,#0b7285,#2f9e44);
+flex-direction:column;
+align-items:center;
+display:none;
+padding:20px 0;
+}
+
+.nav-links a{
+margin:12px 0;
+font-size:18px;
+}
+
+.nav-links.active{
+display:flex;
 }
 
 }
 
 </style>
+
+
 </head>
 <script>
 
@@ -91,13 +127,13 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const links = document.querySelectorAll(".nav-links a");
 
-/* open / close menu */
+/* open menu */
 
 menuToggle.addEventListener("click", () => {
 navLinks.classList.toggle("active");
 });
 
-/* auto close when clicking a link */
+/* close menu when clicking section */
 
 links.forEach(link => {
 link.addEventListener("click", () => {
