@@ -361,21 +361,70 @@ animation:float 4s ease-in-out infinite;
 
 }
 
-/* MOBILE */
+/* MOBILE OPTIMIZATION */
 
 @media(max-width:900px){
 
+.home-section{
+padding:90px 6%;
+}
+
+/* CONTAINER */
+
 .home-container{
 grid-template-columns:1fr;
+gap:40px;
 text-align:center;
 }
 
+/* TITLE */
+
+.home-text h1{
+font-size:32px;
+line-height:1.3;
+margin-bottom:18px;
+}
+
+/* TEXT */
+
+.home-text p{
+font-size:15px;
+line-height:1.7;
+max-width:100%;
+margin:auto;
+margin-bottom:25px;
+}
+
+/* BUTTONS */
+
 .home-buttons{
 justify-content:center;
+flex-wrap:wrap;
+gap:12px;
 }
+
+.btn-primary,
+.btn-secondary{
+padding:11px 20px;
+font-size:14px;
+}
+
+/* IMAGE */
+
+.home-image{
+margin-top:10px;
+}
+
+.home-image img{
+max-width:100%;
+height:auto;
+}
+
+/* FEATURES (if used later) */
 
 .home-features{
 justify-content:center;
+gap:12px;
 }
 
 }
@@ -572,19 +621,87 @@ font-weight:600;
 background:#2f9e44;
 }
 
-
-/* MOBILE */
+/* MOBILE OPTIMIZATION */
 
 @media(max-width:900px){
+
+.about-section{
+padding:90px 6%;
+}
 
 .about-container{
 grid-template-columns:1fr;
 text-align:center;
-gap:40px;
+gap:45px;
 }
+
+/* TITLE */
+
+.about-left h2{
+font-size:30px;
+margin-bottom:18px;
+}
+
+/* TEXT */
+
+.about-left p{
+font-size:15px;
+line-height:1.7;
+max-width:100%;
+margin:auto;
+margin-bottom:15px;
+}
+
+/* FEATURES */
 
 .about-features{
 grid-template-columns:1fr;
+gap:10px;
+max-width:320px;
+margin:20px auto 0;
+}
+
+/* FEATURE BOX */
+
+.feature{
+padding:10px 12px;
+font-size:13px;
+}
+
+/* FOUNDER CARD */
+
+.founder-card{
+padding:25px;
+max-width:420px;
+margin:auto;
+}
+
+/* TITLE */
+
+.founder-title{
+font-size:20px;
+}
+
+/* DIVIDER */
+
+.divider{
+margin:10px auto 15px auto;
+}
+
+/* TEXT */
+
+.founder-card p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* BUTTON */
+
+.linkedin-btn{
+display:inline-block;
+margin-top:8px;
+padding:10px 18px;
+font-size:14px;
 }
 
 }
@@ -839,7 +956,7 @@ and optimize indoor environments.
 
 <div class="platform-card">
 
-<img src="sensor.jpg" class="platform-img">
+<img src="6om.png" class="platform-img">
 
 <h3>IoT Sensor Network</h3>
 
@@ -863,7 +980,7 @@ inside industrial facilities.
 
 <div class="platform-card">
 
-<img src="ai.jpg" class="platform-img">
+<img src="7om.png" class="platform-img">
 
 <h3>AI Vector Modeling</h3>
 
@@ -887,7 +1004,7 @@ inside industrial facilities.
 
 <div class="platform-card">
 
-<img src="digitaltwin.jpg" class="platform-img">
+<img src="8om.png" class="platform-img">
 
 <h3>Digital Twin Simulation</h3>
 
@@ -911,7 +1028,7 @@ without affecting real operations.
 
 <div class="platform-card">
 
-<img src="alerts.jpg" class="platform-img">
+<img src="9om.png" class="platform-img">
 
 <h3>Anomaly Detection</h3>
 
@@ -934,7 +1051,7 @@ breaches and reduces operational risk for industrial facilities.
 
 <div class="platform-card">
 
-<img src="dashboard.jpg" class="platform-img">
+<img src="10om.png" class="platform-img">
 
 <h3>Smart Dashboard</h3>
 
@@ -957,7 +1074,7 @@ analytics, and control environmental optimization strategies.
 
 <div class="platform-card">
 
-<img src="compliance.jpg" class="platform-img">
+<img src="11om.png" class="platform-img">
 
 <h3>Compliance Reporting</h3>
 
