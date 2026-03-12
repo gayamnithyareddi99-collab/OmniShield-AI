@@ -39,7 +39,7 @@ color:#1e293b;
 position:fixed;
 top:0;
 width:100%;
-background:white;
+background:linear-gradient(120deg,#0b7285,#2f9e44);
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
 z-index:1000;
 }
@@ -62,184 +62,13 @@ color:var(--primary);
 .nav-links a{
 margin-left:25px;
 text-decoration:none;
-color:#333;
+color:#ffffff;
 font-weight:500;
 }
 
 .nav-links a:hover{
 color:var(--primary);
 }
-
-/* HERO */
-
-.hero{
-padding:140px 8% 100px;
-background:linear-gradient(120deg,#e7f5ff,#ebfbee);
-}
-
-.hero-container{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-gap:50px;
-}
-
-.hero h1{
-font-size:46px;
-margin-bottom:20px;
-}
-
-.hero p{
-color:#555;
-line-height:1.7;
-margin-bottom:25px;
-}
-
-.hero button{
-padding:13px 25px;
-border:none;
-background:var(--primary);
-color:white;
-border-radius:6px;
-font-weight:600;
-cursor:pointer;
-}
-
-.hero img{
-width:100%;
-}
-
-/* SECTIONS */
-
-.section{
-padding:100px 8%;
-}
-
-.section-title{
-text-align:center;
-font-size:36px;
-margin-bottom:10px;
-}
-
-.section-sub{
-text-align:center;
-color:#666;
-margin-bottom:60px;
-}
-
-/* ABOUT */
-
-.about-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-}
-
-.about-box{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
-
-/* FEATURES */
-
-.features-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.feature-card{
-background:white;
-padding:25px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:.3s;
-}
-
-.feature-card:hover{
-transform:translateY(-6px);
-}
-
-/* PROCESS */
-
-.process-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.process-card{
-background:white;
-padding:25px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
-
-/* PRICING */
-
-.pricing-grid{
-max-width:1000px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.price-card{
-background:white;
-padding:30px;
-text-align:center;
-border-radius:10px;
-border:1px solid #eee;
-}
-
-.price-card button{
-margin-top:15px;
-padding:10px 20px;
-background:var(--secondary);
-border:none;
-color:white;
-border-radius:6px;
-}
-
-/* CONTACT */
-
-.contact-container{
-max-width:900px;
-margin:auto;
-}
-
-.contact-container input,
-.contact-container textarea{
-width:100%;
-padding:12px;
-margin-bottom:12px;
-border:1px solid #ddd;
-border-radius:6px;
-}
-
-/* FOOTER */
-
-.footer{
-background:#0f172a;
-color:white;
-padding:30px;
-text-align:center;
-margin-top:50px;
-}
-
 /* MOBILE */
 
 @media(max-width:900px){
@@ -256,7 +85,27 @@ grid-template-columns:1fr;
 
 </style>
 </head>
+<script>
 
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const links = document.querySelectorAll(".nav-links a");
+
+/* open / close menu */
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+/* auto close when clicking a link */
+
+links.forEach(link => {
+link.addEventListener("click", () => {
+navLinks.classList.remove("active");
+});
+});
+
+</script>
 <body>
 
 <!-- NAVBAR -->
@@ -266,12 +115,21 @@ grid-template-columns:1fr;
 
 <div class="logo">OmniShield AI</div>
 
-<div class="nav-links">
+<!-- MOBILE MENU BUTTON -->
+
+<div class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="nav-links" id="navLinks">
 <a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#technology">Technology</a>
-<a href="#process">How it Works</a>
+<a href="#process">Process</a>
+<a href="#platform">Platform</a>
 <a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </div>
 
