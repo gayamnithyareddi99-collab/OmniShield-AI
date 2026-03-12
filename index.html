@@ -59,6 +59,10 @@ font-size:20px;
 color:white;
 }
 
+.nav-links{
+display:flex;
+}
+
 .nav-links a{
 margin-left:25px;
 text-decoration:none;
@@ -119,29 +123,8 @@ display:flex;
 
 </style>
 
-
 </head>
-<script>
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-const links = document.querySelectorAll(".nav-links a");
-
-/* open menu */
-
-menuToggle.addEventListener("click", () => {
-navLinks.classList.toggle("active");
-});
-
-/* close menu when clicking section */
-
-links.forEach(link => {
-link.addEventListener("click", () => {
-navLinks.classList.remove("active");
-});
-});
-
-</script>
 <body>
 
 <!-- NAVBAR -->
@@ -171,6 +154,34 @@ navLinks.classList.remove("active");
 
 </div>
 </header>
+
+
+<!-- SCRIPT MUST BE AT BOTTOM -->
+
+<script>
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const links = document.querySelectorAll(".nav-links a");
+
+/* open menu */
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+/* close menu when clicking section */
+
+links.forEach(link => {
+link.addEventListener("click", () => {
+navLinks.classList.remove("active");
+});
+});
+
+</script>
+
+</body>
+</html>
 <!-- HOME / HERO SECTION -->
 
 <section class="home-section" id="home">
